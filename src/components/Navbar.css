@@ -176,12 +176,32 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 0.25rem;
-    display: none;
+    display: flex;
     padding: 0.25rem 0;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-8px);
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+      max-height 0.5s ease,
+      opacity 0.2s ease,
+      transform 0.5s ease,
+      visibility 0s linear 0.5s;
   }
 
   .Navbar .nav-links.open {
-    display: flex;
+    max-height: 300px;
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: auto;
+    transition:
+      max-height 0.5s ease,
+      opacity 0.25s ease,
+      transform 0.5s ease,
+      visibility 0s;
   }
 
   .Navbar .nav-links li {
