@@ -1,15 +1,34 @@
 import React from "react";
 import "./Experiences.css";
 import resume from "../assets/3BresumeNEW.pdf";
-import alertdriving_logo from "../assets/alertdriving_logo.jpeg";
-import ontario_logo from "../assets/ontario.png";
 import chat_logo from "../assets/chat.png";
+import ontario_logo from "../assets/ontario.png";
+import alertdriving_logo from "../assets/alertdriving_logo.jpeg";
 import ford_logo from "../assets/ford_logo.png";
+import marketingkitchen_logo from "../assets/marketingkitchen_logo.png";
+import ibm_logo from "../assets/ibm_logo.png";
 
 const experiencesData = [
-  {
+    {
     id: 1,
-    title: "Software Engineering Intern",
+    title: "Delivery Consultant Intern",
+    company: "IBM",
+    duration: "Incoming Fall 2026",
+    image: ibm_logo,
+    link: "https://www.ibm.com/",
+  },
+    {
+    id: 2,
+    title: "Software Engineer Intern",
+    company: "Marketing Kitchen",
+    duration: "Jan 2026 - Present",
+    tools: "Tools: Python, C#, Go, .NET, SQL",
+    image: marketingkitchen_logo,
+    link: "https://www.marketingkitchen.ca/",
+  },
+  {
+    id: 3,
+    title: "Software Engineer Intern",
     company: "Ford Motor Company",
     duration: "Jan 2025 - Apr 2025",
     tools: "Tools: React.js, Playwright, Java, Terraform, Hoppscotch, GCP",
@@ -21,7 +40,7 @@ const experiencesData = [
     link: "https://www.fordpro.com/en-us/",
   },
   {
-    id: 2,
+    id: 4,
     title: "Software Quality Assurance Engineering Intern",
     company: "AlertDriving",
     duration: "May 2024 - Aug 2024",
@@ -34,7 +53,7 @@ const experiencesData = [
     link: "https://www.alertdriving.info/",
   },
   {
-    id: 3,
+    id: 5,
     title: "IT QA Assistant",
     company: "Ontario Ministry of Education",
     duration: "Sept 2023 - Dec 2023",
@@ -47,7 +66,7 @@ const experiencesData = [
     link: "https://efis.fma.csc.gov.on.ca/faab/",
   },
   {
-    id: 4,
+    id: 6,
     title: "Data Processor",
     company: "CHAT Insurance",
     duration: "Jan 2023 - Apr 2023",

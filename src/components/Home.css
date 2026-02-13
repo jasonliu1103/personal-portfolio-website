@@ -1,13 +1,11 @@
 .Home {
-  display: inline-block;
-  justify-content: flex-start;
-  flex-direction: column;
-  margin-top: 260px;
-  padding-left: 130px;
+  width: min(var(--page-max-width), 100%);
+  margin: calc(var(--nav-height) + var(--hero-gap)) auto 0;
+  padding: 0 var(--page-gutter);
 }
 
 .home-title {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 2.5rem);
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -24,13 +22,17 @@
   font-size: 1.2rem;
   margin-top: 25px;
   margin-bottom: 20px;
+  max-width: 700px;
 }
 
 .typeanimation {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 3.8vw, 1.5rem);
   font-weight: bold;
   margin-bottom: 20px;
   position: relative;
+  display: inline-block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 
 .typeanimation::after {
@@ -78,4 +80,19 @@ a.github-btn:hover {
 
 .github-btn svg {
   font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .Home {
+    margin-top: calc(var(--nav-height) + 40px);
+  }
+
+  .smaller-heading {
+    font-size: 1rem;
+  }
+
+  a.resume-btn,
+  a.github-btn {
+    margin-bottom: 10px;
+  }
 }

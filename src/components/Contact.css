@@ -1,25 +1,21 @@
 #contact {
-  padding: 20px;
-  margin-top: 100px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  transform: translateX(180px);
+  width: min(var(--page-max-width), 100%);
+  margin: var(--section-gap) auto 0;
+  padding: 0 var(--page-gutter);
+  display: grid;
+  grid-template-columns: minmax(240px, 320px) 1fr;
+  gap: 24px;
+  align-items: start;
 }
 
 .contact-info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 400px;
-  transform: translate(50px, -70px);
 }
 
 .contact-title {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 2.5rem);
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -59,12 +55,13 @@ a.email-btn-C:hover {
 .contact-buttons {
   display: flex;
   flex-direction: row;
-  gap: 5px;
-  padding-left: 10px;
+  gap: 8px;
+  padding-left: 0;
+  flex-wrap: wrap;
 }
 
 .contact-container {
-  flex: 1;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -74,7 +71,7 @@ a.email-btn-C:hover {
   padding: 20px;
   border-radius: 8px;
   width: 100%;
-  max-width: 600px;
+  max-width: 680px;
 }
 
 #contact form {
@@ -92,7 +89,7 @@ a.email-btn-C:hover {
 
 #contact .contact-textarea {
   width: 100%;
-  height: 100px;
+  height: 120px;
 }
 
 #contact input[type="submit"] {
@@ -134,14 +131,14 @@ a.email-btn-C:hover {
   border: 0.5px solid #555;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   #contact {
-    flex-direction: column;
-    align-items: center;
+    margin-top: 72px;
+    grid-template-columns: 1fr;
   }
 
   .contact-container {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 0;
   }
 }

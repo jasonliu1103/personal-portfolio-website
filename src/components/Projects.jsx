@@ -4,8 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 import websitepic from "../assets/website.png";
 import darkwebsitepic from '../assets/darkwebsitepic.png';
-import javapic from "../assets/java.png"
-import darkjavapic from "../assets/javadark.png"
+import spotify_logo from "../assets/spotify_logo.png";
 import qm from "../assets/qm.png"
 
 const projectsdata = [
@@ -21,13 +20,12 @@ const projectsdata = [
   },
   {
     id: 2,
-    title: "Some Java Project",
-    description: "Some new Java project that I started working on.",
+    title: "Spotify API Project",
+    description: "A project that interacts with the Spotify API to fetch and display music data.",
     link: "", 
     githublink: "", 
-    tools: "Java",
-    image: javapic, 
-    darkImage: darkjavapic,
+    tools: "React.js, Spotify API, CSS, C#, .NET",
+    image: spotify_logo,
   },
   {
     id: 3,
@@ -71,7 +69,7 @@ const Projects = ({theme, setTheme}) => {
   return (
     <section id="projects">
       <div className="projects">
-        <h1 className="title">Projects</h1>
+        <h1 className="project-section-title">Projects</h1>
         {projectsdata.map((project) => (
           <div key={project.id} className="project-card">
             <img src={theme === "dark" && project.darkImage ? project.darkImage : project.image} alt={project.title} className="project-image" />

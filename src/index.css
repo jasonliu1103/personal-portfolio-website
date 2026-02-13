@@ -5,9 +5,26 @@
   font-family: sans-serif;
 }
 
+:root {
+  --page-max-width: 1120px;
+  --page-gutter: clamp(18px, 4vw, 72px);
+  --nav-height: 84px;
+  --hero-gap: clamp(76px, 12vh, 170px);
+  --section-gap: clamp(76px, 10vh, 130px);
+}
+
 html, body {
   width: 100%;
   overflow-x: hidden;
+}
+
+body {
+  line-height: 1.5;
+}
+
+section {
+  width: 100%;
+  scroll-margin-top: calc(var(--nav-height) + 8px);
 }
 
 .container {
@@ -15,6 +32,7 @@ html, body {
   min-height: 100vh;
   background: #c6d5e7;
   transition: 0.3s;
+  overflow-x: hidden;
 }
 
 .container.dark {

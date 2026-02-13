@@ -1,15 +1,25 @@
 .Experiences {
-  display: inline-block;
-  justify-content: flex-start;
-  flex-direction: column;
-  margin-top: 150px;
-  padding-left: 130px;
+  width: min(var(--page-max-width), 100%);
+  margin: var(--section-gap) auto 0;
+  padding: 0 var(--page-gutter);
 }
 
 .Experiences .title {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 2.5rem);
   font-weight: bold;
-  margin-bottom: 50px;
+  margin-bottom: 32px;
+}
+
+.experiences-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.experience-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .experience-details {
@@ -30,9 +40,6 @@
 .experience-duration {
   font-size: 1em;
   margin: 5px 0;
-  position: absolute;
-  top: 10px;  
-  right: 10px;  
 }
 
 .experience-tools {
@@ -56,12 +63,12 @@
   transition: transform 0.3s, box-shadow 0.3s;
   padding: 20px;
   border-radius: 30px;
-  width: 150%;
+  width: 100%;
   display: flex;
   position: relative;
-  max-width: 1200px; 
-  margin: 0 auto;
   margin-bottom: 20px;
+  align-items: flex-start;
+  gap: 1rem;
 }
 
 .experience-item::before {
@@ -100,20 +107,41 @@ a.resume-btn-experiences:hover {
 }
 
 .experience-image {
-  width: 100px; 
-  height: 100px; 
-  margin-right: 20px;  
-  border-radius: 1px; 
+  width: 96px;
+  height: 96px;
+  border-radius: 1px;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
 .experience-item p.p1,
 .experience-item p.p2,
 .experience-item p.p3,
 .experience-item p.p4 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .experience-item p strong {
   font-weight: bold;
+}
+
+@media (max-width: 900px) {
+  .Experiences {
+    margin-top: 72px;
+  }
+
+  .experience-item {
+    flex-direction: column;
+    border-radius: 20px;
+  }
+
+  .experience-title {
+    font-size: 1.2rem;
+  }
+
+  .experience-company,
+  .experience-tools,
+  .experience-duration {
+    font-size: 0.95rem;
+  }
 }
