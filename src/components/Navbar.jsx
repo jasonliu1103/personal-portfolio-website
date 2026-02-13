@@ -51,7 +51,7 @@ const Navbar = ({ theme, setTheme }) => {
         </Link>
         <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
           <li>
-            <Link to="home" smooth={true} duration={500} onClick={closeMenu}>
+            <Link to="home" smooth={true} duration={500} offset={-180} onClick={closeMenu}>
               Home
             </Link>
           </li>
@@ -61,7 +61,7 @@ const Navbar = ({ theme, setTheme }) => {
             </Link>
           </li>
           <li>
-            <Link to="experiences" smooth={true} duration={500} onClick={closeMenu}>
+            <Link to="experiences" smooth={true} duration={500} offset={-180} onClick={closeMenu}>
               Experience
             </Link>
           </li>
@@ -71,7 +71,7 @@ const Navbar = ({ theme, setTheme }) => {
             </Link>
           </li>
           <li>
-            <Link to="contact" smooth={true} duration={500} onClick={closeMenu}>
+            <Link to="contact" smooth={true} duration={500} offset={-180} onClick={closeMenu}>
               Contact
             </Link>
           </li>
@@ -79,12 +79,14 @@ const Navbar = ({ theme, setTheme }) => {
         <div className="nav-actions">
           <button
             type="button"
-            className="menu-button"
+            className={`menu-button ${menuOpen ? "open" : ""}`}
             onClick={() => setMenuOpen((previous) => !previous)}
             aria-expanded={menuOpen}
-            aria-label="Toggle navigation menu"
+            aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
           >
-            {menuOpen ? "Close" : "Menu"}
+            <span className="menu-button-bar" />
+            <span className="menu-button-bar" />
+            <span className="menu-button-bar" />
           </button>
           <img
             onClick={() => {

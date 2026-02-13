@@ -120,13 +120,39 @@
 
 .menu-button {
   display: none;
+  width: 40px;
+  height: 40px;
+  padding: 0;
   cursor: pointer;
-  font-size: 0.85rem;
-  border: 1px solid currentColor;
+  border: none;
   background: transparent;
   color: inherit;
-  padding: 6px 10px;
-  border-radius: 6px;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-button-bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 4px;
+  background-color: currentColor;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+.menu-button.open .menu-button-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-button.open .menu-button-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-button.open .menu-button-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 @media (max-width: 860px) {
@@ -137,8 +163,6 @@
 
   .menu-button {
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .logo {
