@@ -42,7 +42,7 @@ const Navbar = ({ theme, setTheme }) => {
   return (
     <div className={`Navbar ${isScrolled || menuOpen ? "blurred" : ""}`}>
       <div className="navbar-inner">
-        <Link to="home" smooth={true} duration={500} className="logo-link" onClick={closeMenu}>
+        <Link to="home" smooth={true} duration={500} offset={-180} className="logo-link" onClick={closeMenu}>
           <img
             src={`${logo_light}`}
             alt=""
