@@ -1,6 +1,6 @@
 #contact {
   width: min(var(--page-max-width), 100%);
-  margin: var(--section-gap) auto 0;
+  margin: calc(var(--section-gap ) + 140px) auto 0;
   padding: 0 var(--page-gutter);
   display: grid;
   grid-template-columns: minmax(240px, 320px) 1fr;

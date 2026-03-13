@@ -5,7 +5,6 @@ import { BsBoxArrowUpRight } from "react-icons/bs";
 import websitepic from "../assets/website.png";
 import darkwebsitepic from '../assets/darkwebsitepic.png';
 import spotify_logo from "../assets/spotify_logo.png";
-import qm from "../assets/qm.png"
 
 const projectsdata = [
   {
@@ -26,43 +25,7 @@ const projectsdata = [
     githublink: "", 
     tools: "React.js, Spotify API, CSS, C#, .NET",
     image: spotify_logo,
-  },
-  {
-    id: 3,
-    title: "To Be Thought Of",
-    description: "It doesn't exist yet. Please wait until I think of something.",
-    link: "", 
-    githublink: "", 
-    tools: "Insert some programming language", 
-    image: qm,
-  },
-  {
-    id: 4,
-    title: "To Be Thought Of",
-    description: "It doesn't exist yet. Please wait until I think of something.",
-    link: "", 
-    githublink: "", 
-    tools: "Insert some programming language", 
-    image: qm,
-  },
-  {
-    id: 5,
-    title: "To Be Thought Of",
-    description: "It doesn't exist yet. Please wait until I think of something.",
-    link: "", 
-    githublink: "", 
-    tools: "Insert some programming language", 
-    image: qm,
-  },
-  {
-    id: 6,
-    title: "To Be Thought Of",
-    description: "It doesn't exist yet. Please wait until I think of something.",
-    link: "", 
-    githublink: "", 
-    tools: "Insert some programming language", 
-    image: qm,
-  },
+  }
 ];
 
 const Projects = ({theme, setTheme}) => {

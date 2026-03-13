@@ -2,7 +2,6 @@ import React from "react";
 import "./Footer.css";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
@@ -26,14 +25,6 @@ const Footer = () => {
           rel="noopener noreferrer"
         >
           <FaGithub />
-        </a>
-        <a
-          href="https://www.instagram.com/jason._.liu__/"
-          className="ig-btn-F"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaInstagram />
         </a>
         <a
           href="mailto:jzliu@uwaterloo.ca"
