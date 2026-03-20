@@ -1,30 +1,31 @@
 import { useEffect, useState } from "react";
-import Navbar from "./components/Navbar.jsx";
+import { Navigate, Route, Routes } from "react-router-dom";
+import Layout from "./components/Layout.jsx";
 import Home from "./components/Home.jsx";
 import About from "./components/About.jsx";
 import Experiences from "./components/Experiences.jsx";
 import Projects from "./components/Projects.jsx";
 import Contact from "./components/Contact.jsx";
-import Footer from "./components/Footer.jsx";
 
 function App() {
-  const current_theme = localStorage.getItem("current_state");
-  const [theme, setTheme] = useState(current_theme ? current_theme : "light");
+  const currentTheme = localStorage.getItem("current_state");
+  const [theme, setTheme] = useState(currentTheme || "light");
 
   useEffect(() => {
     localStorage.setItem("current_state", theme);
-  });
+  }, [theme]);
 
   return (
-    <div className={`container ${theme}`}>
-      <Navbar theme={theme} setTheme={setTheme} />
-      <Home theme={theme} setTheme={setTheme} />
-      <About theme={theme} setTheme={setTheme} />
-      <Experiences theme={theme} setTheme={setTheme} />
-      <Projects theme={theme} setTheme={setTheme} />
-      <Contact theme={theme} setTheme={setTheme} />
-      <Footer theme={theme} setTheme={setTheme} />
-    </div>
+    <Routes>
+      <Route element={<Layout theme={theme} setTheme={setTheme} />}>
+        <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="experience" element={<Experiences />} />
+        <Route path="projects" element={<Projects theme={theme} />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Route>
+    </Routes>
   );
 }
 

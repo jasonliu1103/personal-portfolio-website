@@ -1,6 +1,6 @@
 .Experiences {
   width: min(var(--page-max-width), 100%);
-  margin: calc(var(--section-gap) + 240px) auto 0;
+  margin: var(--page-top-space) auto 0;
   padding: 0 var(--page-gutter);
 }
 
@@ -126,10 +126,6 @@ a.resume-btn-experiences:hover {
 }
 
 @media (max-width: 900px) {
-  .Experiences {
-    margin-top: 72px;
-  }
-
   .experience-item {
     flex-direction: column;
     border-radius: 20px;

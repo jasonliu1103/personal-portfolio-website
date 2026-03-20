@@ -11,6 +11,9 @@
   --nav-height: 84px;
   --hero-gap: clamp(76px, 12vh, 170px);
   --section-gap: clamp(76px, 10vh, 130px);
+  --hero-top-space: calc(var(--nav-height) + clamp(52px, 11vh, 132px));
+  --page-top-space: calc(var(--nav-height) + clamp(32px, 8vh, 72px));
+  --page-bottom-space: clamp(48px, 8vh, 88px);
 }
 
 html, body {
@@ -37,4 +40,9 @@ section {
 
 .container.dark {
   background: #000;
+}
+
+.page-shell {
+  min-height: calc(100vh - var(--nav-height));
+  padding-bottom: var(--page-bottom-space);
 }

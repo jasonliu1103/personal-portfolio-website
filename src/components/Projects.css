@@ -1,6 +1,6 @@
 .projects {
   width: min(var(--page-max-width), 100%);
-  margin: var(--section-gap) auto 0;
+  margin: var(--page-top-space) auto 0;
   padding: 0 var(--page-gutter);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -117,10 +117,4 @@
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
-}
-
-@media (max-width: 900px) {
-  .projects {
-    margin-top: 72px;
-  }
 }

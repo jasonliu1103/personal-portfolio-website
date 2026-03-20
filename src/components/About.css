@@ -1,6 +1,6 @@
 .About {
   width: min(var(--page-max-width), 100%);
-  margin: calc(var(--section-gap) + 340px) auto 0;
+  margin: 230px auto 0;
   padding: 0 var(--page-gutter);
 }
 
@@ -41,10 +41,4 @@
   padding: 0;
   padding-bottom: 20px;
   line-height: 1.7;
-}
-
-@media (max-width: 768px) {
-  .About {
-    margin-top: 72px;
-  }
 }

@@ -1,12 +1,21 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-scroll";
+import { NavLink, useLocation } from "react-router-dom";
 import "./Navbar.css";
 import logo_light from "../assets/logo-black.png";
 import light_toggle from "../assets/night.png";
 
 const Navbar = ({ theme, setTheme }) => {
+  const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const navItems = [
+    { label: "Home", to: "/" },
+    { label: "About", to: "/about" },
+    { label: "Experience", to: "/experience" },
+    { label: "Projects", to: "/projects" },
+    { label: "Contact", to: "/contact" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,42 +48,28 @@ const Navbar = ({ theme, setTheme }) => {
     setMenuOpen(false);
   };
 
+  const isRouteActive = (path) => {
+    return location.pathname === path;
+  };
+
   return (
     <div className={`Navbar ${isScrolled || menuOpen ? "blurred" : ""}`}>
       <div className="navbar-inner">
-        <Link to="home" smooth={true} duration={500} offset={-180} className="logo-link" onClick={closeMenu}>
+        <NavLink to="/" className="logo-link" onClick={closeMenu}>
           <img
             src={`${logo_light}`}
             alt=""
             className="logo"
           />
-        </Link>
+        </NavLink>
         <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
-          <li>
-            <Link to="home" smooth={true} duration={500} offset={-180} onClick={closeMenu}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="about" smooth={true} duration={500} offset={-180} onClick={closeMenu}>
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="experiences" smooth={true} duration={500} offset={-180} onClick={closeMenu}>
-              Experience
-            </Link>
-          </li>
-          <li>
-            <Link to="projects" smooth={true} duration={500} offset={-180} onClick={closeMenu}>
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link to="contact" smooth={true} duration={500} offset={-180} onClick={closeMenu}>
-              Contact
-            </Link>
-          </li>
+          {navItems.map((item) => (
+            <li key={item.to} className={isRouteActive(item.to) ? "active" : ""}>
+              <NavLink to={item.to} onClick={closeMenu} end={item.to === "/"}>
+                {item.label}
+              </NavLink>
+            </li>
+          ))}
         </ul>
         <div className="nav-actions">
           <button

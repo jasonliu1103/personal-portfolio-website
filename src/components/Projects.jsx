@@ -28,7 +28,7 @@ const projectsdata = [
   }
 ];
 
-const Projects = ({theme, setTheme}) => {
+const Projects = ({ theme }) => {
   return (
     <section id="projects">
       <div className="projects">

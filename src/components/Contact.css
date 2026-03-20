@@ -1,6 +1,6 @@
 #contact {
   width: min(var(--page-max-width), 100%);
-  margin: calc(var(--section-gap ) + 140px) auto 0;
+  margin: 230px auto 0;
   padding: 0 var(--page-gutter);
   display: grid;
   grid-template-columns: minmax(240px, 320px) 1fr;
@@ -133,7 +133,6 @@ a.email-btn-C:hover {
 
 @media (max-width: 900px) {
   #contact {
-    margin-top: 72px;
     grid-template-columns: 1fr;
   }
 
