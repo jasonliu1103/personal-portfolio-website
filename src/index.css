@@ -2,10 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
 }
 
 :root {
+  --font-body: "Google Sans", sans-serif;
+  --font-heading: "Google Sans", sans-serif;
   --page-max-width: 1120px;
   --page-gutter: clamp(18px, 4vw, 72px);
   --nav-height: 84px;
@@ -23,6 +24,15 @@ html, body {
 
 body {
   line-height: 1.5;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-optical-sizing: auto;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
 }
 
 section {
@@ -45,4 +55,30 @@ section {
 .page-shell {
   min-height: calc(100vh - var(--nav-height));
   padding-bottom: var(--page-bottom-space);
+}
+
+.Navbar .nav-links a,
+.home-title,
+.about-title,
+.Experiences .title,
+.experience-title,
+.project-section-title,
+.project-title,
+.contact-title {
+  font-family: var(--font-heading);
+  letter-spacing: -0.025em;
+}
+
+.resume-btn,
+.github-btn,
+.resume-btn-experiences,
+.project-link,
+.project-github,
+.linkedin-btn-C,
+.email-btn-C,
+.linkedin-btn-F,
+.github-btn-F,
+.email-btn-F,
+.menu-button {
+  font-family: var(--font-heading);
 }
