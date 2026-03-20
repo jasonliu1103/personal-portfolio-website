@@ -17,8 +17,11 @@
   --page-bottom-space: clamp(48px, 8vh, 88px);
 }
 
-html, body {
+html,
+body,
+#root {
   width: 100%;
+  min-height: 100%;
   overflow-x: hidden;
 }
 
@@ -27,6 +30,20 @@ body {
   font-family: var(--font-body);
   font-weight: 400;
   font-optical-sizing: auto;
+  background: #c6d5e7;
+  transition: background 0.3s ease;
+}
+
+html[data-theme="dark"],
+body[data-theme="dark"] {
+  background: #000;
+  color-scheme: dark;
+}
+
+html[data-theme="light"],
+body[data-theme="light"] {
+  background: #c6d5e7;
+  color-scheme: light;
 }
 
 button,
@@ -43,9 +60,12 @@ section {
 .container {
   width: 100%;
   min-height: 100vh;
+  min-height: 100dvh;
   background: #c6d5e7;
   transition: 0.3s;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .container.dark {
@@ -53,7 +73,8 @@ section {
 }
 
 .page-shell {
-  min-height: calc(100vh - var(--nav-height));
+  flex: 1 0 auto;
+  min-height: 0;
   padding-bottom: var(--page-bottom-space);
 }
 

@@ -1,6 +1,6 @@
 .Home {
   width: min(var(--page-max-width), 100%);
-  margin: 230px auto 0;
+  margin: 220px auto 0;
   padding: 0 var(--page-gutter);
   justify-content: center;
 }
