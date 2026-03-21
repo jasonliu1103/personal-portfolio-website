@@ -14,11 +14,11 @@ const Home = () => {
         <TypeAnimation
           className="typeanimation"
           sequence={[
+            "I'm an ECE student at UWaterloo",
+            1500,
             "I'm an aspiring engineer",
             1500,
-            "I'm a music enthusiast",
-            1500,
-            "I'm an ECE student at UWaterloo",
+            "I'm just living life",
             1500,
           ]}
           wrapper="span"
@@ -28,7 +28,7 @@ const Home = () => {
           cursor={false}
         />
         <p className="smaller-heading">
-          You will find everything you need to know about me here. Enjoy.
+          Thanks for stopping by — feel free to explore my experiences and projects.
         </p>
         <a
           href={resume}

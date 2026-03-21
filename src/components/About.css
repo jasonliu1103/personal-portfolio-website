@@ -1,6 +1,6 @@
 .About {
   width: min(var(--page-max-width), 100%);
-  margin: 150px auto 0;
+  margin: 220px auto 0;
   padding: 0 var(--page-gutter);
 }
 
