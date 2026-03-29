@@ -29,7 +29,7 @@ const Contact = () => {
         <p className="contact-text">Feel free to reach out!</p>
         <div className="contact-buttons">
         <a
-          href="https://www.linkedin.com/in/jason-liu-422791237/"
+          href="https://www.linkedin.com/in/jason-z-liu/"
           className="linkedin-btn-C"
           target="_blank"
           rel="noopener noreferrer"

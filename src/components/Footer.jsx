@@ -11,7 +11,7 @@ const Footer = () => {
       <p className="footer-text">2026 © Built and designed by Jason Liu.</p>
       <div className="footer-container">
         <a
-          href="https://www.linkedin.com/in/jason-liu-422791237/"
+          href="https://www.linkedin.com/in/jason-z-liu/"
           className="linkedin-btn-F"
           target="_blank"
           rel="noopener noreferrer"
