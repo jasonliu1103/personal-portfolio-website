@@ -17,12 +17,16 @@ const experiencesData = [
     image: ibm_logo,
     link: "https://www.ibm.com/",
   },
-    {
+  {
     id: 2,
     title: "Software Engineer Intern",
     company: "Marketing Kitchen",
     duration: "Jan 2026 - Present",
-    tools: "Tools: Python, C#, Go, .NET, SQL",
+    tools: "Tools: Python, C#, Go, .NET, React.js, Next.js, SQL",
+    p1: "• Eliminated direct <strong>ERP dependency</strong> by building a <strong>.NET Web API in C#</strong> that wrapped a legacy SOAP system into <strong>REST</strong> endpoints, translating XML into structured JSON.",
+    p2: "• Automated data ingestion by developing a <strong>.NET BackgroundService</strong> pipeline that synchronizes <strong>2,400+ orders</strong> and <strong>20,600+ order details</strong> across a <strong>4-level entity hierarchy</strong> on a <strong>15-minute interval</strong>.",
+    p3: "• Improved data retrieval performance by implementing concurrent <strong>API calls</strong> (<strong>300+ requests</strong>) with caching and semaphore-based rate control for reliable bulk ingestion.",
+    p4: "• Built an internal <strong>Next.js</strong> dashboard with <strong>Microsoft Entra ID SSO</strong> to monitor <strong>2,400+ ERP orders</strong>, featuring filtering, overdue detection, and detailed drill-down views.",
     image: marketingkitchen_logo,
     link: "https://www.marketingkitchen.ca/",
   },

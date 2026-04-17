@@ -4,7 +4,8 @@ import { FaGithub } from "react-icons/fa";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 import websitepic from "../assets/website.png";
 import darkwebsitepic from '../assets/darkwebsitepic.png';
-import spotify_logo from "../assets/spotify_logo.png";
+import pulseboardlight from "../assets/pulseboardlight.png";
+import pulseboarddark from "../assets/pulseboarddark.png";
 
 const projectsdata = [
   {
@@ -13,18 +14,19 @@ const projectsdata = [
     description: "My personal portfolio website created with React that highlights my work experience and projects.",
     link: "", 
     githublink: "https://github.com/jasonliu1103/personalportfoliowebsite", 
-    tools: "React.js, CSS",
+    tools: "React.js, CSS, JavaScript",
     image: websitepic, 
     darkImage: darkwebsitepic,
   },
   {
     id: 2,
-    title: "Spotify API Project",
-    description: "A project that interacts with the Spotify API to fetch and display music data.",
+    title: "Pulseboard",
+    description: "Full-stack Spotify analytics dashboard with scheduled data syncs, SQL-backed historical insights, and AI playlist generation.",
     link: "", 
-    githublink: "", 
-    tools: "React.js, Spotify API, CSS, C#, .NET",
-    image: spotify_logo,
+    githublink: "https://github.com/jasonliu1103/spotify-api-pulseboard", 
+    tools: "React.js, Next.js, Spotify API, Tailwind CSS, TypeScript, PostgreSQL, Prisma",
+    image: pulseboardlight,
+    darkImage: pulseboarddark,
   }
 ];
 
