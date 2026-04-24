@@ -21,7 +21,7 @@ const experiencesData = [
     id: 2,
     title: "Software Engineer Intern",
     company: "Marketing Kitchen",
-    duration: "Jan 2026 - Present",
+    duration: "Jan 2026 - Apr 2026",
     tools: "Tools: Python, C#, Go, .NET, React.js, Next.js, SQL",
     p1: "• Eliminated direct <strong>ERP dependency</strong> by building a <strong>.NET Web API in C#</strong> that wrapped a legacy SOAP system into <strong>REST</strong> endpoints, translating XML into structured JSON.",
     p2: "• Automated data ingestion by developing a <strong>.NET BackgroundService</strong> pipeline that synchronizes <strong>2,400+ orders</strong> and <strong>20,600+ order details</strong> across a <strong>4-level entity hierarchy</strong> on a <strong>15-minute interval</strong>.",
