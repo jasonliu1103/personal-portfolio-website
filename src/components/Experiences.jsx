@@ -13,7 +13,7 @@ const experiencesData = [
     id: 1,
     title: "Delivery Consultant Intern",
     company: "IBM",
-    duration: "Incoming Fall 2026",
+    duration: "Sept 2026 - Present",
     image: ibm_logo,
     link: "https://www.ibm.com/",
   },
