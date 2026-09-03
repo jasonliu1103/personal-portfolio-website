@@ -1,6 +1,6 @@
 import React from "react";
 import "./Experiences.css";
-import resume from "../assets/2026Resume.pdf";
+import resume from "../assets/fall2026resume.pdf";
 import chat_logo from "../assets/chat.png";
 import ontario_logo from "../assets/ontario.png";
 import alertdriving_logo from "../assets/alertdriving_logo.jpeg";
@@ -11,7 +11,7 @@ import ibm_logo from "../assets/ibm_logo.png";
 const experiencesData = [
     {
     id: 1,
-    title: "Delivery Consultant Intern",
+    title: "Software Engineer & Consultant Intern",
     company: "IBM",
     duration: "Sept 2026 - Present",
     image: ibm_logo,
